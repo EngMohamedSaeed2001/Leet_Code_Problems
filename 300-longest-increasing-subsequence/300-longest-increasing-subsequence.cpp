@@ -1,7 +1,7 @@
 class Solution {
 public:
-   int lengthOfLIS(vector<int>& nums) {
-        int max=0;
+ int lengthOfLIS(vector<int>& nums) {
+        
         vector<int>index(nums.size(),1);
 
         for (int i = 1; i <nums.size() ; ++i) {
@@ -11,8 +11,8 @@ public:
             }
         }
 
-        auto n=std::max_element(index.begin(), index.end());
-        max=*n;
-        return max;
+        sort(index.begin(),index.end());
+        
+        return index.at(index.size()-1);
     }
 };
