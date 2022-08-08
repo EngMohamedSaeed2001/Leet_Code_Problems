@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int fib(int n) {
+     int fib(int n) {
         int fib[100];
         fib[n];
         fib[0]=0;
